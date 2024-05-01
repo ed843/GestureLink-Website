@@ -1,0 +1,455 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&family=Roboto:wght@400;700&display=swap');
+
+header {
+    background-color: #333;
+    overflow: hidden;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Distribute space between items */
+}
+html, body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.site-title {
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0.875rem 1rem;
+    display: inline-block;
+}
+
+
+header, nav, section, footer {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap:3rem;
+    }
+
+    nav li {
+        display: inline;
+    }
+
+    nav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0.875rem 1rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        position: relative;
+        margin-right: 1.25rem; /* Adjust the margin to add space between items */
+    }
+
+        nav a:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.125rem;
+            bottom: 0;
+            left: 0;
+            background-color: #4CAF50;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover:before, nav a.active:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+/* Responsive Navigation */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0; /* Remove margin for responsive layout */
+        margin-bottom: 0.625rem; /* Add space between items for responsive layout */
+    }
+
+        nav a:last-child {
+            margin-bottom: 0; /* Remove margin from the last item for responsive layout */
+        }
+}
+/* Hero Section */
+/* Hero Section */
+.cta-button {
+    position:relative;
+    display: inline-block;
+    z-index: 2;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.9375rem 1.875rem;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1.25rem;
+}
+
+    .cta-button:hover {
+        background-color: #45a049;
+    }
+.hero-section {
+    text-align: center;
+    background-image: url('./assets/hero_background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    padding: 18.75rem 1.25rem;
+    background-attachment:fixed;
+}
+
+    .hero-section:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+    }
+
+    .hero-section h2,
+    .hero-section p {
+        position: relative;
+        z-index: 1;
+    }
+
+/* Features Section */
+@media screen and (max-width: 768px) {
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    .features-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        background-color: rgba(227,247,249,255);
+        position: relative;
+        color: #f2f2f2;
+    }
+
+        .features-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+        }
+
+    .feature {
+        flex: 1;
+        padding: 1.25rem;
+        text-align: center;
+        font-size: 1.25rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+        .feature p {
+            position: relative;
+        }
+
+        .feature:nth-child(1) {
+            background-image: url('./assets/gesture_control.jpg');
+            padding: 9.375rem 3.75rem;
+        }
+
+        .feature:nth-child(2) {
+            background-image: url('./assets/home_automation.jpg');
+            padding: 9.375rem 3.75rem;
+        }
+
+        .feature:nth-child(3) {
+            background-image: url('./assets/Security_System.jpg');
+            padding: 9.375rem 3.75rem;
+        }
+
+        .feature h3 {
+            position: relative;
+            color: #4CAF50;
+        }
+
+
+
+
+    /* CTA Section */
+
+    .cta-section {
+        text-align: center;
+        background-color: #4CAF50;
+        padding: 3.125rem 1.25rem;
+        color: white;
+        margin-bottom: 0;
+    }
+
+        .cta-section h2 {
+            color: #fff;
+        }
+
+        .cta-section p {
+            color: #f5f5f5;
+        }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-top: 0;
+        padding: 1.25rem;
+        background-color: #333;
+        color: #f2f2f2;
+        bottom: 0;
+    }
+    /* Team Section */
+    .team-section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 3.125rem;
+        width: 100%;
+        bottom: 0;
+        color: white;
+    }
+
+    .advisor-member {
+        text-align: center;
+        color: white;
+    }
+
+        .advisor-member img {
+            max-width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 10%; /* Use 50% to create a circular shape for the advisor image */
+            margin: 0 auto; /* Center-align the image horizontally */
+            display: block; /* Remove any default inline styles */
+        }
+
+    .team-members {
+        grid-column: 1 / -1;
+    }
+
+    .team-member {
+        text-align: center;
+        color: white;
+        height: 20rem;
+    }
+
+        .team-member img {
+            max-width: 18.75rem;
+            height: 20rem;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10%;
+        }
+
+        .team-member p {
+            margin-top: 1.25rem;
+        }
+
+    /* Deliverables Section */
+    .deliverables-section {
+        margin-top: 1.25rem;
+        margin-left: 1.25rem;
+        color: white;
+        margin-right: 1.25rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.25rem;
+    }
+
+    th, td {
+        padding: 0.9375rem;
+        text-align: left;
+        border-bottom: 0.0625rem solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #696971;
+    }
+
+    .pdf-button {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.625rem 1.25rem;
+        text-decoration: none;
+        border-radius: 0.3125rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .pdf-button:hover {
+            background-color: #45a049;
+        }
+
+    .pdf-icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url('path/to/pdf-icon.png') center center no-repeat;
+        background-size: cover;
+        margin-right: 0.625rem;
+    }
+
+    /* ... (previous styles) ... */
+
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: fit-content;
+        visibility: hidden; /* Set to initially hidden */
+        opacity: 0; /* Set to initially transparent */
+        transition: visibility 0s, opacity 0.3s ease-in-out;
+        z-index: 1; /* Add a higher z-index to ensure it's above other elements */
+    }
+
+        .menu-links.open {
+            visibility: visible; /* Set to visible when the menu is open */
+            opacity: 1; /* Set to opaque when the menu is open */
+        }
+
+        /* ... (rest of the styles) ... */
+
+        .menu-links a {
+            display: block;
+            padding: 0.625rem;
+            text-align: center;
+            font-size: 1.5rem;
+            color: black;
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        .menu-links li {
+            list-style: none;
+        }
+
+        .menu-links.open {
+            max-height: 18.75rem;
+        }
+/*Gallery Section*/
+.gallery-section {
+    background-color: dimgrey
+}
+
+.gallery-text {
+    color: white;
+}
+
+
+.project-image {
+    text-align: center;
+}
+
+.project-image img {
+     width:50%;
+     height:auto;
+     object-fit: cover;
+ }
+
+/*Setting Backgrounds*/
+    .team-background {
+        background-color: dimgrey;
+    }
+
+    .deliverables-background {
+        background-color: dimgrey;
+    }
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap; 
+    }
+
+    .site-title {
+        margin-bottom: 1.25rem; 
+    }
+
+    nav {
+        width: 100%; 
+        text-align: center; 
+        margin-top: 1rem; 
+    }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.625rem; 
+        }
+
+        nav a {
+            margin: 0.3125rem 0; 
+        }
+}
+@media screen and (max-width: 768px) {
+    .team-section {
+        grid-template-columns: repeat(1, 1fr); /* Change to a single column layout on smaller screens */
+        gap: 10px; /* Adjust the gap for better spacing */
+    }
+
+    .team-member {
+        height: auto; /* Allow the team member boxes to adjust their height based on content */
+    }
+}
